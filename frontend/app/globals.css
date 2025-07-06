@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 199 89% 48%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 199 89% 48%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 199 89% 48%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 199 89% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom BargainB styles */
+.bargainb-gradient {
+  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+}
+
+.store-badge-ah {
+  @apply bg-ah text-white;
+}
+
+.store-badge-dirk {
+  @apply bg-dirk text-white;
+}
+
+.store-badge-hoogvliet {
+  @apply bg-hoogvliet text-white;
+}
+
+.store-badge-jumbo {
+  @apply bg-jumbo text-white;
+}
+
+/* Status indicators */
+.status-healthy {
+  @apply bg-green-100 text-green-800 border-green-200;
+}
+
+.status-warning {
+  @apply bg-yellow-100 text-yellow-800 border-yellow-200;
+}
+
+.status-error {
+  @apply bg-red-100 text-red-800 border-red-200;
+}
+
+.status-unknown {
+  @apply bg-gray-100 text-gray-800 border-gray-200;
+}
+
+/* Animation utilities */
+.animate-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Scrollbar styling */
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+} 
